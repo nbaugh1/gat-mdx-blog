@@ -1,10 +1,12 @@
 const siteMetadata ={
     title: `NPB Dev Blog`,
     description: `Developer blog`,
-}
+};
 
 module.exports = {
+    siteMetadata: siteMetadata,
     plugins: [
+        `gatsby-plugin-styled-components`
       {
         resolve: `gatsby-plugin-mdx`,
         options: {
