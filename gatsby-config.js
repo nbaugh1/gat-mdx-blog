@@ -6,7 +6,7 @@ const siteMetadata ={
 module.exports = {
     siteMetadata: siteMetadata,
     plugins: [
-        `gatsby-plugin-styled-components`
+        `gatsby-plugin-styled-components`,
       {
         resolve: `gatsby-plugin-mdx`,
         options: {
