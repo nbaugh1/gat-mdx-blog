@@ -1,11 +1,13 @@
 import { graphql } from 'gatsby';
 import React from 'react';
+// import Dump from '../components/Dump';
 import { Layout } from '../components/Layout';
 
 export default ({ data }) => {
   return (
     <>
       <Layout>
+        {/* <Dump data={data} /> */}
         {data.allMdx.nodes.map(({ excerpt, frontmatter }) => (
           <>
             <h1>{frontmatter.title}</h1>
