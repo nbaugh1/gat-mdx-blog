@@ -1,31 +1,40 @@
-import { graphql, Link } from 'gatsby';
+import { Link, graphql } from 'gatsby';
+import Img from 'gatsby-image';
 import React from 'react';
-import styled from 'styled-components'
-// import Dump from '../components/Dump';
+import styled from 'styled-components';
 import { Layout } from '../components/Layout';
 
-const IndexWrapper = styled.main ``;
+const IndexWrapper = styled.main``;
 
-const PostWrapper = styled.div ``;
+const PostWrapper = styled.div``;
+
+const Image = styled(Img)`
+  border-radius: 5px;
+`;
 
 export default ({ data }) => {
   return (
-    <>
-      <Layout>
-        {/* <Dump data={data} /> */}
-        <IndexWrapper>
-        {data.allMdx.nodes.map(({ id, excerpt, frontmatter, fields }) => (
-          <PostWrapper key={id}>
-            <Link to={fields.slug}>
-            <h1>{frontmatter.title}</h1>
-            <p>{frontmatter.date}</p>
-            <p>{excerpt}</p>
-            </Link>
-          </PostWrapper>
-        ))}
-        </IndexWrapper>
-      </Layout>
-    </>
+    <Layout>
+      <IndexWrapper>
+        {/* <Dump data={data}></Dump> */}
+        {data.allMdx.nodes.map(
+          ({ id, excerpt, frontmatter, fields }) => (
+            <PostWrapper key={id}>
+              <Link to={fields.slug}>
+                {!!frontmatter.cover ? (
+                  <Image
+                    sizes={frontmatter.cover.childImageSharp.sizes}
+                  />
+                ) : null}
+                <h1>{frontmatter.title}</h1>
+                <p>{frontmatter.date}</p>
+                <p>{excerpt}</p>
+              </Link>
+            </PostWrapper>
+          )
+        )}
+      </IndexWrapper>
+    </Layout>
   );
 };
 
@@ -40,9 +49,20 @@ export const query = graphql`
         excerpt(pruneLength: 250)
         frontmatter {
           title
-          date
+          date(formatString: "YYYY MMMM Do")
+          cover {
+            publicURL
+            childImageSharp {
+              sizes(
+                maxWidth: 2000
+                traceSVG: { color: "#639" }
+              ) {
+                ...GatsbyImageSharpSizes_tracedSVG
+              }
+            }
+          }
         }
-        fields{
+        fields {
           slug
         }
       }
