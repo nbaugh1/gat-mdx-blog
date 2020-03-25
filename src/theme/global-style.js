@@ -2,43 +2,6 @@ import { createGlobalStyle } from 'styled-components';
 import reset from 'styled-reset';
 
 export const theme = {
-<<<<<<< HEAD
-  breakpoints: {
-    sm: '640px',
-    md: '768px',
-    lg: '1024px',
-    xl: '1280px',
-  },
-  colours: {
-    transparent: 'transparent',
-
-    black: '#000',
-    white: '#fff',
-
-    primary: {
-      100: '#aa7fd4',
-      200: '#9966cc',
-      300: '#884cc3',
-      400: '#773bb2',
-      500: '#663399',
-      600: '#552b80',
-      700: '#442266',
-      800: '#331a4d',
-      900: '#221133',
-    },
-
-    grey: {
-      100: '#f7fafc',
-      200: '#edf2f7',
-      300: '#e2e8f0',
-      400: '#cbd5e0',
-      500: '#a0aec0',
-      600: '#718096',
-      700: '#4a5568',
-      800: '#2d3748',
-      900: '#1a202c',
-    },
-  },
   font: {
     sans: 'Poppins, sans-serif',
     serif: 'Pridi, sans',
@@ -130,11 +93,37 @@ export const theme = {
     lg: '0.5rem',
     full: '9999px',
   },
-};
-=======
-  
+  colors: {
+    transparent: 'transparent',
+
+    black: '#000',
+    white: '#fff',
+
+    primary: {
+      100: '#aa7fd4',
+      200: '#9966cc',
+      300: '#884cc3',
+      400: '#773bb2',
+      500: '#663399',
+      600: '#552b80',
+      700: '#442266',
+      800: '#331a4d',
+      900: '#221133',
+    },
+
+    grey: {
+      100: '#f7fafc',
+      200: '#edf2f7',
+      300: '#e2e8f0',
+      400: '#cbd5e0',
+      500: '#a0aec0',
+      600: '#718096',
+      700: '#4a5568',
+      800: '#2d3748',
+      900: '#1a202c',
+    },
+  },
 }
->>>>>>> temp
 
 export const GlobalStyle = createGlobalStyle`
   ${reset}
@@ -146,12 +135,12 @@ export const GlobalStyle = createGlobalStyle`
     scroll-behavior: smooth;
     font-family: ${({ theme }) => theme.font.sans};
     font-size: ${({ theme }) => theme.fontSize.xl};
-    color: ${({ theme }) => theme.colours.grey[900]};
+    color: ${({ theme }) => theme.colors.grey[900]};
   }
   body {
     line-height: ${({ theme }) => theme.lineHeight.relaxed};
     letter-spacing: ${({ theme }) => theme.letterSpacing.wide};
-    background-color: ${({ theme }) => theme.colours.grey[100]};
+    background-color: ${({ theme }) => theme.colors.grey[100]};
   }
   .youtube-mdx-embed, 
   .gatsby-resp-image-wrapper {
@@ -162,7 +151,7 @@ export const GlobalStyle = createGlobalStyle`
     margin: 0 -10px;
     padding: 0 5px;
     border-left: 5px solid ${({ theme }) =>
-      theme.colours.primary[500]};
+    theme.colors.primary[500]};
   }
   .__react_component_tooltip {
     height: 100px;
