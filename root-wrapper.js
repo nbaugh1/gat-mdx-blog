@@ -1,8 +1,8 @@
 import React from 'react';
 import { MDXProvider } from '@mdx-js/react';
 import { ThemeProvider } from 'styled-components';
-import Code from './src/components/Code';
-import Layout from './src/components/Layout';
+import { Code } from './src/components/Code';
+import { Layout } from './src/components/Layout';
 import { GlobalStyle, theme } from './src/theme/global-style'
 
 const components = {
@@ -28,11 +28,11 @@ const components = {
   }  
 };
 
-export const wrapPageElement = ({ element }) => (
-    <ThemeProvider theme={theme}>
-      <GlobalStyle />
-      <MDXProvider components={components}>
-        <Layout>{element}</Layout>
-      </MDXProvider>
-    </ThemeProvider>
+export const wrapRootElement = ({ element }) => (
+  <ThemeProvider theme={theme}>
+  <GlobalStyle />
+  <MDXProvider components={components}>
+    <Layout>{element}</Layout>
+  </MDXProvider>
+</ThemeProvider>
 );
