@@ -4,8 +4,9 @@
   "description": "",
   "main": "index.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1",
-    "dev": "gatsby develop -p 9999 -o"
+    "dev": "gatsby develop -p 9988 -o",
+    "build": "gatsby build",
+    "serve": "gatsby serve -p 9500 -o"
   },
   "keywords": [],
   "author": "",
