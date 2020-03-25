@@ -9,6 +9,7 @@ const components = {
   'p.inlineCode': props => (
     <code style={{ backgroundColor: 'lightgray' }} {...props} />
   ),
+  
   pre: ({ children: { props } }) => {
     if (props.mdxType === 'code') {
       return (
