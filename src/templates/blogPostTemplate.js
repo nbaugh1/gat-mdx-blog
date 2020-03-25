@@ -2,7 +2,6 @@ import { graphql, Link } from 'gatsby';
 import { MDXRenderer } from 'gatsby-plugin-mdx';
 import React from 'react';
 import SEO from 'react-seo-component';
-import { Layout } from '../components/Layout';
 import { useSiteMetadata } from '../hooks/useSiteMetadata';
 
 export default ({ data, pageContext }) => {
@@ -18,7 +17,7 @@ export default ({ data, pageContext }) => {
   const { title, date, cover } = frontmatter;
   const { previous, next } = pageContext;
   return (
-    <Layout>
+    <>
       <SEO
         title={title}
         description={excerpt}
@@ -57,7 +56,7 @@ export default ({ data, pageContext }) => {
           )}
         </>
       )}
-    </Layout>
+    </>
   );
 };
 
