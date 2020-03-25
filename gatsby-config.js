@@ -2,7 +2,7 @@ const siteMetadata = {
   title: `NPB Dev Blog`,
   description: `My developer's blog.`,
   image: `/default-site-image.jpg`, // goes in ./static
-  siteUrl: `https://nbaugh1.github.io/blog`,
+  siteUrl: `https://npb-dev-blog.netlify.com/`,
   siteLanguage: `en-GB`,
   siteLocale: `en_gb`,
   twitterUsername: `@nbaugh1`,
