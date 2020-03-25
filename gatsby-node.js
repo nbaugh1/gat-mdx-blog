@@ -39,19 +39,6 @@ exports.createPages = ({ actions, graphql }) => {
     })
 }
 
-exports.createSchemaCustomization = ({ actions }) => {
-  const { createTypes } = actions
-
-  createTypes(`
-    type Mdx implements Node {
-      frontmatter: MdxFrontmatter!
-    }
-    type MdxFrontmatter {
-      cover: File @fileByRelativePath
-    }
-  `)
-}
-
 exports.onCreateNode = ({ node, actions, getNode }) => {
     const { createNodeField } = actions
     if (node.internal.type === `Mdx`) {
