@@ -1,8 +1,7 @@
 import React from 'react';
 import { MDXProvider } from '@mdx-js/react';
 import { ThemeProvider } from 'styled-components';
-import { Code, CodeWrapper } from './src/components/Code';
-import { InlineCode } from './src/components/InlineCode'
+import { Code } from './src/components/Code';
 import { Layout } from './src/components/Layout';
 import { GlobalStyle, theme } from './src/theme/global-style'
 
@@ -39,11 +38,11 @@ const components = {
   wrapper: ({ children }) => <>{children}</>,  
 };
 
-export const wrapPageElement = ({ element }) => (
-    <ThemeProvider theme={theme}>
-      <GlobalStyle />
-        <MDXProvider components={components}>
-          <Layout>{element}</Layout>
-        </MDXProvider>
-    </ThemeProvider>
+export const wrapRootElement = ({ element }) => (
+  <ThemeProvider theme={theme}>
+  <GlobalStyle />
+  <MDXProvider components={components}>
+    <Layout>{element}</Layout>
+  </MDXProvider>
+</ThemeProvider>
 );

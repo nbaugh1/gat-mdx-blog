@@ -2,6 +2,7 @@ import { createGlobalStyle } from 'styled-components';
 import reset from 'styled-reset';
 
 export const theme = {
+<<<<<<< HEAD
   breakpoints: {
     sm: '640px',
     md: '768px',
@@ -130,6 +131,10 @@ export const theme = {
     full: '9999px',
   },
 };
+=======
+  
+}
+>>>>>>> temp
 
 export const GlobalStyle = createGlobalStyle`
   ${reset}
