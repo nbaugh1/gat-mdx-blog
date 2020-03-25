@@ -1,7 +1,13 @@
-const siteMetadata ={
-    title: `NPB Dev Blog`,
-    description: `Developer blog`,
-};
+const siteMetadata = {
+  title: `NPB Dev Blog`,
+  description: `My developer's blog.`,
+  image: `/default-site-image.jpg`,
+  siteUrl: `https://nbaugh1.github.io/blog`,
+  siteLanguage: `en-GB`,
+  siteLocale: `en_gb`,
+  twitterUsername: `@nbaugh1`,
+  authorName: `Nick Baughman`,
+}
 
 module.exports = {
   siteMetadata: siteMetadata,
@@ -9,6 +15,7 @@ module.exports = {
     `gatsby-plugin-styled-components`,
     `gatsby-transformer-sharp`,
     `gatsby-plugin-sharp`,
+    `gatsby-plugin-react-helmet`,
     {
       resolve: `gatsby-plugin-mdx`,
       options: {
