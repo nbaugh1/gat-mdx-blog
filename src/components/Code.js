@@ -1,5 +1,5 @@
 import Highlight, { defaultProps } from 'prism-react-renderer';
-import theme from 'prism-react-renderer/themes/nightOwl';
+import { theme } from 'prism-react-renderer/themes/vsDark';
 import React from 'react';
 import styled from 'styled-components';
 import { copyToClipboard } from '../utils/copy-to-clipboard';
@@ -9,6 +9,12 @@ import {
   LivePreview,
   LiveProvider,
 } from 'react-live';
+import { NegMargin } from './shared';
+
+export const CodeWrapper = styled.div`
+  position: relative;
+  ${NegMargin}
+`;
 
 export const Pre = styled.pre`
   text-align: left;
@@ -48,7 +54,7 @@ const Code = ({ codeString, language, ...props }) => {
 
   if(props['react-live']){
     return(
-      <LiveProvider code={codeString} noInline={true} theme={theme}>
+      <LiveProvider code={codeString} noInline={true} theme={ theme }>
         <LiveEditor />
         <LiveError />
         <LivePreview />
@@ -65,7 +71,7 @@ const Code = ({ codeString, language, ...props }) => {
       {...defaultProps}
       code={codeString}
       language={language}
-      theme={theme}
+      theme={ theme }
     >
       {({
         className,
