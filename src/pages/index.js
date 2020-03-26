@@ -5,6 +5,7 @@ import SEO from 'react-seo-component';
 import styled from 'styled-components';
 import { useSiteMetadata } from '../hooks/useSiteMetadata';
 import { H1 } from '../components/page-elements/h1';
+import { H5 } from '../components/page-elements/h5';
 import { P } from '../components/page-elements/p';
 // import Dump from '../components/Dump'
 
@@ -58,7 +59,7 @@ export default ({ data }) => {
                   />
                 ) : null}
                 <H1>{frontmatter.title}</H1>
-                <h5>{frontmatter.date}</h5>
+                <H5>{frontmatter.date}</H5>
                 </Link>
                 <P>{excerpt}</P>
               

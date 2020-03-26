@@ -95,33 +95,12 @@ export const theme = {
   },
   colors: {
     transparent: 'transparent',
-
     black: '#000',
     white: '#fff',
-
-    primary: {
-      100: '#aa7fd4',
-      200: '#9966cc',
-      300: '#884cc3',
-      400: '#773bb2',
-      500: '#663399',
-      600: '#552b80',
-      700: '#442266',
-      800: '#331a4d',
-      900: '#221133',
-    },
-
-    grey: {
-      100: '#f7fafc',
-      200: '#edf2f7',
-      300: '#e2e8f0',
-      400: '#cbd5e0',
-      500: '#a0aec0',
-      600: '#718096',
-      700: '#4a5568',
-      800: '#2d3748',
-      900: '#1a202c',
-    },
+    primary: '#48435C',
+    secondary: '#5A5766',
+    accent: '#61E786',
+    text: '#EDFFEC',
   },
 }
 
@@ -135,12 +114,12 @@ export const GlobalStyle = createGlobalStyle`
     scroll-behavior: smooth;
     font-family: ${({ theme }) => theme.font.sans};
     font-size: ${({ theme }) => theme.fontSize.xl};
-    color: ${({ theme }) => theme.colors.grey[900]};
+    color: ${({ theme }) => theme.colors.text};
   }
   body {
     line-height: ${({ theme }) => theme.lineHeight.relaxed};
     letter-spacing: ${({ theme }) => theme.letterSpacing.wide};
-    background-color: ${({ theme }) => theme.colors.grey[100]};
+    background-color: ${({ theme }) => theme.colors.primary};
   }
   .youtube-mdx-embed, 
   .gatsby-resp-image-wrapper {

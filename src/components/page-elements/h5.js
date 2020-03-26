@@ -1,9 +1,9 @@
 import styled from 'styled-components';
 
-export const H1 = styled.h1`
-  font-size: ${({ theme }) => theme.fontSize['2xl']};
+export const H5 = styled.h5`
+  font-size: ${({ theme }) => theme.fontSize['sm']};
   font-family: ${({ theme }) => theme.font.sans};
-  margin-top: ${({ theme }) => theme.spacing[8]};
+  margin-top: ${({ theme }) => theme.spacing[4]};
   line-height: ${({ theme }) => theme.lineHeight.none};
   color: ${({ theme }) => theme.colors.accent};
 `;
