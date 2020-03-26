@@ -4,6 +4,8 @@ import React from 'react';
 import SEO from 'react-seo-component';
 import styled from 'styled-components';
 import { useSiteMetadata } from '../hooks/useSiteMetadata';
+import { H1 } from '../components/page-elements/h1';
+import { P } from '../components/page-elements/p';
 // import Dump from '../components/Dump'
 
 const IndexWrapper = styled.main`
@@ -55,10 +57,10 @@ export default ({ data }) => {
                     fluid={frontmatter.cover.childImageSharp.fluid}
                   />
                 ) : null}
-                <h1>{frontmatter.title}</h1>
+                <H1>{frontmatter.title}</H1>
                 <h5>{frontmatter.date}</h5>
                 </Link>
-                <p>{excerpt}</p>
+                <P>{excerpt}</P>
               
             </PostWrapper>
           )
