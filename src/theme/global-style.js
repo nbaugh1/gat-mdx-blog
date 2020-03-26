@@ -3,9 +3,9 @@ import reset from 'styled-reset';
 
 export const theme = {
   font: {
-    sans: 'Poppins, sans-serif',
-    serif: 'Pridi, sans',
-    monospace: '"Space Mono", monospace',
+    sans: 'Barlow, sans-serif',
+    serif: 'Arvo, sans',
+    monospace: '"Roboto Mono, monospace',
   },
   fontSize: {
     xs: '0.75rem',

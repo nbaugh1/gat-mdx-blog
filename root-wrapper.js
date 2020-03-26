@@ -6,6 +6,7 @@ import { Layout } from './src/components/Layout';
 import { GlobalStyle, theme } from './src/theme/global-style'
 
 const components = {
+  
   h2: ({ children }) => (	 
     <h2 style={{ color: 'rebeccapurple' }}>{children}</h2>	
   ),	 
@@ -28,9 +29,9 @@ const components = {
       );
     }
   },
-  // small: props => <Small {...props} />,
-  // ul: props => <Ul {...props} />,
-  wrapper: ({ children }) => <>{children}</>,  
+  wrapper: ({ children }) => <>{children}
+  
+  </>,  
 };
 
 export const wrapRootElement = ({ element }) => (

@@ -2,7 +2,6 @@ import React from 'react';
 import styled from 'styled-components';
 import { useSiteMetadata } from '../hooks/useSiteMetadata';
 import { Header } from './Header';
-// import { GlobalStyle } from '../theme/global-style';
 
 const AppStyles = styled.main `
     width: 800px;

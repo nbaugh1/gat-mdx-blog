@@ -3,12 +3,17 @@ import Img from 'gatsby-image';
 import React from 'react';
 import SEO from 'react-seo-component';
 import styled from 'styled-components';
-// import { Layout } from '../components/Layout';
 import { useSiteMetadata } from '../hooks/useSiteMetadata';
+// import Dump from '../components/Dump'
 
-const IndexWrapper = styled.main``;
+const IndexWrapper = styled.main`
+`;
 
-const PostWrapper = styled.div``;
+const PostWrapper = styled.div`
+    padding: 5px;
+    margin: 5px;
+    max-width: 700px;
+`;
 
 const Image = styled(Img)`
   border-radius: 5px;
@@ -24,6 +29,8 @@ export default ({ data }) => {
     siteLocale,
     twitterUsername,
   } = useSiteMetadata();
+
+  
   return (
     <>
       <SEO
@@ -39,17 +46,20 @@ export default ({ data }) => {
         {/* <Dump data={data}></Dump> */}
         {data.allMdx.nodes.map(
           ({ id, excerpt, frontmatter, fields }) => (
+            
             <PostWrapper key={id}>
-              <Link to={fields.slug}>
+              <Link to={fields.slug}
+                  style={{textDecoration: 'none'}}>
                 {!!frontmatter.cover ? (
                   <Image
-                    sizes={frontmatter.cover.childImageSharp.sizes}
+                    fluid={frontmatter.cover.childImageSharp.fluid}
                   />
                 ) : null}
                 <h1>{frontmatter.title}</h1>
-                <p>{frontmatter.date}</p>
+                <h5>{frontmatter.date}</h5>
+                </Link>
                 <p>{excerpt}</p>
-              </Link>
+              
             </PostWrapper>
           )
         )}
@@ -73,8 +83,8 @@ export const query = graphql`
           cover {
             publicURL
             childImageSharp {
-              sizes(maxWidth: 2000, traceSVG: { color: "#639" }) {
-                ...GatsbyImageSharpSizes_tracedSVG
+              fluid {
+                ...GatsbyImageSharpFluid_tracedSVG
               }
             }
           }
