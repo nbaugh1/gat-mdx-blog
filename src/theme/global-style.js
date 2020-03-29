@@ -5,7 +5,7 @@ export const theme = {
   font: {
     sans: 'Barlow, sans-serif',
     serif: 'Arvo, sans',
-    monospace: '"Roboto Mono, monospace',
+    monospace: 'Roboto Mono, monospace',
   },
   fontSize: {
     xs: '0.75rem',
