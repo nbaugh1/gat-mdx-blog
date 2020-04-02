@@ -6,7 +6,7 @@ const Dump = props => (
       fontSize: 20,
       border: '1px solid #efefef',
       padding: 10,
-      background: 'white',
+      background: 'black',
     }}
   >
     {Object.entries(props).map(([key, val]) => (

@@ -139,7 +139,7 @@ export const GlobalStyle = createGlobalStyle`
   .header{
     background: ${({ theme }) => theme.colors.primary};
     padding: 50px;
-    text-align: center;
+    ${'' /* text-align: center; */}
   }
   .post{
     background: ${({ theme }) => theme.colors.secondary};

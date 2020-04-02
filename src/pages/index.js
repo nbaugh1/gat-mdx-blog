@@ -7,7 +7,7 @@ import { useSiteMetadata } from '../hooks/useSiteMetadata';
 import { H3 } from '../components/page-elements/h3';
 import { H5 } from '../components/page-elements/h5';
 import { P } from '../components/page-elements/p';
-// import Dump from '../components/Dump'
+import Dump from '../components/Dump'
 
 const IndexWrapper = styled.main`
 `;
@@ -46,15 +46,16 @@ export default ({ data }) => {
         twitterUsername={twitterUsername}
       />
       <IndexWrapper>
-        {/* <Dump data={data}></Dump> */}
         {data.allMdx.nodes.map(
           ({ id, excerpt, frontmatter, fields }) => (
             
             <PostWrapper key={id}>
             <div className="post">
+        {/* <Dump data={data}></Dump> */}
               <Link to={fields.slug}
                   style={{textDecoration: 'none'}}>
                 {!!frontmatter.cover ? (
+                 
                   <Image
                     fluid={frontmatter.cover.childImageSharp.fluid}
                   />
@@ -87,8 +88,8 @@ export const query = graphql`
           cover {
             publicURL
             childImageSharp {
-              fluid {
-                ...GatsbyImageSharpFluid_tracedSVG
+              fluid{
+                ...GatsbyImageSharpFluid
               }
             }
           }
