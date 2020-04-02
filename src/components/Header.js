@@ -6,8 +6,10 @@ import { P } from './page-elements/p';
 
 
 export const Header = ({ siteTitle, siteDescription }) => (
+    <div className="header">
     <Link to="/" style={{textDecoration: 'none'}}>
         <H1>{siteTitle}</H1>
         <P>{siteDescription}</P>
     </Link>
+    </div>
 )

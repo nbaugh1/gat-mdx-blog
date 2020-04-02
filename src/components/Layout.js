@@ -12,7 +12,7 @@ export const Layout = ({ children }) => {
     const { title, description } = useSiteMetadata();
     return (
       <AppStyles>
-        <Header siteTitle={title} siteDescription={description} />
+        <Header style={{background: 'red'}} siteTitle={title} siteDescription={description} />
         {children}
       </AppStyles>
     );
