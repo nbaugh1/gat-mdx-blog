@@ -4,7 +4,7 @@ import React from 'react';
 import SEO from 'react-seo-component';
 import styled from 'styled-components';
 import { useSiteMetadata } from '../hooks/useSiteMetadata';
-import { H1 } from '../components/page-elements/h1';
+import { H3 } from '../components/page-elements/h3';
 import { H5 } from '../components/page-elements/h5';
 import { P } from '../components/page-elements/p';
 // import Dump from '../components/Dump'
@@ -51,6 +51,7 @@ export default ({ data }) => {
           ({ id, excerpt, frontmatter, fields }) => (
             
             <PostWrapper key={id}>
+            <div className="post">
               <Link to={fields.slug}
                   style={{textDecoration: 'none'}}>
                 {!!frontmatter.cover ? (
@@ -58,11 +59,11 @@ export default ({ data }) => {
                     fluid={frontmatter.cover.childImageSharp.fluid}
                   />
                 ) : null}
-                <H1>{frontmatter.title}</H1>
+                <H3>{frontmatter.title}</H3>
                 <H5>{frontmatter.date}</H5>
                 </Link>
                 <P>{excerpt}</P>
-              
+              </div>
             </PostWrapper>
           )
         )}

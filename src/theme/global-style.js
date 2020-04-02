@@ -136,4 +136,15 @@ export const GlobalStyle = createGlobalStyle`
     height: 100px;
     max-width: 400px;
   }
+  .header{
+    background: ${({ theme }) => theme.colors.primary};
+    padding: 50px;
+    text-align: center;
+  }
+  .post{
+    background: ${({ theme }) => theme.colors.secondary};
+    padding: 5px 10px;
+    box-shadow: ${({ theme }) => theme.boxShadow.md};
+  }
+
 `;
