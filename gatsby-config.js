@@ -1,6 +1,6 @@
 const siteMetadata = {
   title: `NPB Dev Blog`,
-  description: `My developer's blog.`,
+  description: `Technical writings by Nick Baughman`,
   image: `/default-site-image.jpg`, // goes in ./static
   siteUrl: `https://npb-dev-blog.netlify.com/`,
   siteLanguage: `en-GB`,

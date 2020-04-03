@@ -31,6 +31,7 @@ export default ({ data }) => {
     siteLanguage,
     siteLocale,
     twitterUsername,
+    authorName
   } = useSiteMetadata();
 
   
@@ -38,6 +39,7 @@ export default ({ data }) => {
     <>
       <SEO
         title={title}
+        author={authorName}
         description={description || `nothin’`}
         image={`${siteUrl}${image}`}
         pathname={siteUrl}
@@ -61,7 +63,7 @@ export default ({ data }) => {
                   />
                 ) : null}
                 <H3>{frontmatter.title}</H3>
-                <H5>{frontmatter.date}</H5>
+                <P>{frontmatter.date}</P>
                 </Link>
                 <P>{excerpt}</P>
               </div>
