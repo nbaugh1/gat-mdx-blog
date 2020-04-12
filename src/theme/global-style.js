@@ -95,12 +95,13 @@ export const theme = {
   },
   colors: {
     transparent: 'transparent',
-    black: '#000',
+    black: '#2A2B2E',
     white: '#fff',
-    primary: '#48435C',
-    secondary: '#5A5766',
-    accent: '#61E786',
-    text: '#EDFFEC',
+    primary: '#424651',
+    secondary: '#6B5CA5',
+    accent: '#21FA90',
+    text: '#BCE7FD',
+    blue: '#71A9F7'
   },
 }
 
@@ -138,13 +139,19 @@ export const GlobalStyle = createGlobalStyle`
   }
   .header{
     background: ${({ theme }) => theme.colors.primary};
-    padding: 50px;
-    ${'' /* text-align: center; */}
+    padding: 10px;
+    border: 1px solid black;
+    margin: 10px;
+    display: grid;
+    justify-items: center;
   }
   .post{
-    background: ${({ theme }) => theme.colors.secondary};
+    background: ${({ theme }) => theme.colors.primary};
     padding: 5px 10px;
     box-shadow: ${({ theme }) => theme.boxShadow.md};
+    border: 1px solid ${({ theme }) => theme.colors.black}
   }
-
+  .subtitle{
+    color: ${({ theme }) => theme.colors.accent};
+  }
 `;

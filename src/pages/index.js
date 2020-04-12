@@ -63,7 +63,7 @@ export default ({ data }) => {
                   />
                 ) : null}
                 <H3>{frontmatter.title}</H3>
-                <P>{frontmatter.date}</P>
+                <P className="subtitle">{frontmatter.date}</P>
                 </Link>
                 <P>{excerpt}</P>
               </div>
