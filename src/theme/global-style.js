@@ -139,9 +139,9 @@ export const GlobalStyle = createGlobalStyle`
   }
   .header{
     background: ${({ theme }) => theme.colors.primary};
-    padding: 10px;
+    padding: 40px;
     border: 1px solid black;
-    margin: 10px;
+    margin: 40px;
     display: grid;
     justify-items: center;
   }
