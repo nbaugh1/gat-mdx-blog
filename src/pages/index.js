@@ -53,11 +53,9 @@ export default ({ data }) => {
             
             <PostWrapper key={id}>
             <div className="post">
-        {/* <Dump data={data}></Dump> */}
               <Link to={fields.slug}
                   style={{textDecoration: 'none'}}>
                 {!!frontmatter.cover ? (
-                 
                   <Image
                     fluid={frontmatter.cover.childImageSharp.fluid}
                   />
