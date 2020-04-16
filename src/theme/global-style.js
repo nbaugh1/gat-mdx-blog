@@ -121,6 +121,7 @@ export const GlobalStyle = createGlobalStyle`
     line-height: ${({ theme }) => theme.lineHeight.relaxed};
     letter-spacing: ${({ theme }) => theme.letterSpacing.wide};
     background-color: ${({ theme }) => theme.colors.primary};
+    margin: 40px;
   }
   .youtube-mdx-embed, 
   .gatsby-resp-image-wrapper {
@@ -141,9 +142,15 @@ export const GlobalStyle = createGlobalStyle`
     background: ${({ theme }) => theme.colors.primary};
     padding: 40px;
     border: 1px solid black;
-    margin: 40px;
     display: grid;
     justify-items: center;
+  }
+  .nav{
+    position: fixed;
+    min-width: '100%';
+    height: 40px;
+    background: ${({ theme }) => theme.colors.primary};
+    border: 1px solid black;
   }
   .post{
     background: ${({ theme }) => theme.colors.primary};

@@ -13,13 +13,11 @@ const IndexWrapper = styled.main`
 `;
 
 const PostWrapper = styled.div`
-    padding: 5px;
-    margin: 5px;
-    max-width: 700px;
+    
 `;
 
 const Image = styled(Img)`
-  border-radius: 5px;
+  
 `;
 
 export default ({ data }) => {
